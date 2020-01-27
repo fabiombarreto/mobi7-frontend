@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -12,7 +13,12 @@ import {
   MatTableModule,
   MatButtonModule,
   MatCardModule,
-  MatGridListModule
+  MatGridListModule,
+  MatSelectModule,
+  MatListModule,
+  MatDatepickerModule, 
+  MatNativeDateModule,
+  MatAutocompleteModule  
 } from '@angular/material';
 
 @NgModule({
@@ -22,17 +28,25 @@ import {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatInputModule,
-	MatTableModule,
+	  MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModule
+    MatSelectModule,
+    MatGridListModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatAutocompleteModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
